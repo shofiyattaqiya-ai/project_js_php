@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kartu Biodata Interaktif</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tengah">
+    <h1 style="text-align: center;">BIODATA SAYA</h1>
+   <label for="nama">Nama</label>
+    <input type="text" id="nama" /> <br> <br>
+<label for="kelas">Kelas:</label>
+    <input type="text" id="kelas" /> <br><br>
+    <label for="hobi">Hobi:</label>
+    <input type="text" id="hobi" /> <br><br>
+    <button type="button" onclick="tombol()">TAMPILKAN</button>
+    <hr />
+    <div id="hasil">
+      <p>Nama saya...</p>
+      <p>Kelas saya...</p>
+      <p>Hobi saya...</p>
+    </div>
+    </div>
+    <script>
+      function tombol() {
+        let nama = document.getElementById("nama").value;
+        let kelas = document.getElementById("kelas").value;
+        let hobi = document.getElementById("hobi").value;
+
+        document.getElementById("hasil").innerHTML = 
+        "<p>Nama saya " + nama  + "</p>" +
+        "<p>Kelas saya " + kelas  + "</p>" +
+        "<p>Hobi saya " + hobi + "</p>";
+      }
+    </script>
+  </body>
+</html>
